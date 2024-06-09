@@ -31,9 +31,10 @@ const toShop = () => {
 
   return (
   <>
-  <nav className="navbar text-bg-secondary fixed-top">
+  <nav className="navbar fixed-top">
   <div className="container-fluid">
-    <div  className="col-10"><img src="/public/assets/icons/logo.png" width="120"></img></div>
+    <div  className="col-10">
+    </div>
     <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
