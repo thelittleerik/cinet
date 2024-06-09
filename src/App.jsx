@@ -34,13 +34,13 @@ function App() {
   };
 
   return (
-    <>
-      {isLoggedIn && <Header />}
-      <div className="logo-container w-100 justify-content-center d-flex mt-5">
-        <img src="/public/assets/icons/logo.png" width="150"></img>
-      </div>
-      <div className="main-wrapper d-flex justify-content-center flex-column w-75 w-lg-50 mx-auto">
-        <Router>
+    <Router>
+      <>
+        {isLoggedIn && <Header />}
+        <div className="logo-container w-100 justify-content-center d-flex mt-5">
+          <img src="/public/assets/icons/logo.png" width="150"></img>
+        </div>
+        <div className="main-wrapper d-flex justify-content-center flex-column w-75 w-lg-50 mx-auto">
           <Routes>
             <Route path="/" element={<ProtectedRoute element={<Index />} />} />
             <Route
@@ -76,10 +76,10 @@ function App() {
             />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </Router>
-      </div>
-      {isLoggedIn && <Footer />}
-    </>
+        </div>
+        {isLoggedIn && <Footer />}
+      </>
+    </Router>
   );
 }
 
