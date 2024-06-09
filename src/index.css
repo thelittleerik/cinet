@@ -21,3 +21,30 @@
   line-height:55px;
   text-wrap: wrap;
 }
+
+
+.card {
+  border-color: black;
+}
+
+.card-img-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-body {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+
+.gamebutton{
+  height: 50px;
+  width: 200px;
+  background-color: #020202;
+  color: #f9f9f9;
+  font-family: "Archivo Black", sans-serif;
+  border: none;
+  transition: ease-in-out 0.3s;
+  width: 100%;
+}
