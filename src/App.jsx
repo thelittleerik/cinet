@@ -22,6 +22,7 @@ function App() {
     email: "",
     password: "",
     birthdate: "",
+    points: 0,
   });
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   // eslint-disable-next-line react/prop-types
@@ -50,7 +51,7 @@ function App() {
             <Route path="/map" element={<PublicRoute element={<Map />} />} />
             <Route
               path="/profil"
-              element={<ProtectedRoute element={<Profil />} />}
+              element={<ProtectedRoute element={<Profil user={user} setUser={setUser} />} />}
             />
             <Route
               path="/shop"
