@@ -18,7 +18,10 @@
   will-change: filter;
   transition: filter 300ms;
 }
+<<<<<<< Updated upstream
 
 a:hover {
  cursor: pointer;
 }
+=======
+>>>>>>> Stashed changes
