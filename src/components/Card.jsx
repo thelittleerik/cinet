@@ -3,7 +3,7 @@ import Button from './Button';
 
 function Card({ title, src, alt, description, onButtonClick }) {
   return (
-    <div className="card mb-4 shadow-sm" style={{ borderRadius: '20px', overflow: 'hidden' }}>
+    <div className="card mb-4 shadow-sm" style={{ borderRadius: '0px', overflow: 'hidden' }}>
       <img src={src} className="card-img-top" alt={alt} style={{ height: '200px', objectFit: 'cover', borderTopLeftRadius: '20px', borderTopRightRadius: '20px' }} />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
