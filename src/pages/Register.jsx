@@ -11,6 +11,7 @@ function Register({ setUser }) {
     email: "",
     password: "",
     birthdate: "",
+    points: 0
   });
 
   const handleNavigateLogin = () => {

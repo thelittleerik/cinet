@@ -12,7 +12,7 @@ function Login({ user, setIsLoggedIn }) {
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
 
-  const handleNavigateLogin = () => {
+  const handleNavigateRegister = () => {
     navigate('/register');
   }
 
@@ -72,7 +72,7 @@ function Login({ user, setIsLoggedIn }) {
         </p>
         <p className="fs-3">
           Noch kein Konto?{" "}
-          <a className="text-black " onClick={handleNavigateLogin}>
+          <a className="text-black " onClick={handleNavigateRegister}>
             Registrieren
           </a>
         </p>
