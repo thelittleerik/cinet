@@ -1,14 +1,20 @@
 import Button from "../components/Button";
 import Input from "../components/Input";
+import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 // eslint-disable-next-line react/prop-types
 function Login({ user, setIsLoggedIn }) {
+  const navigate = useNavigate();
   const [loginDetails, setLoginDetails] = useState({
     email: "",
     password: "",
   });
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+
+  const handleNavigateLogin = () => {
+    navigate('/register');
+  }
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -20,9 +26,9 @@ function Login({ user, setIsLoggedIn }) {
 
   const loginUser = () => {
     // eslint-disable-next-line react/prop-types
-    const isEmailValid = user.email === loginDetails.email;
+    const isEmailValid = user.email !== "" && loginDetails.email !== "" && user.email === loginDetails.email;
     // eslint-disable-next-line react/prop-types
-    const isPasswordValid = user.password === loginDetails.password;
+    const isPasswordValid = user.password !== "" && loginDetails.password !== "" && user.password === loginDetails.password;
 
     if (!loginDetails.email) {
       setEmailError("Email cannot be empty");
@@ -38,6 +44,8 @@ function Login({ user, setIsLoggedIn }) {
 
     if (isEmailValid && isPasswordValid) {
       setIsLoggedIn(true);
+    } else {
+      setPasswordError("Falsche E-Mail oder falsches Passwort.");
     }
   };
 
@@ -64,7 +72,7 @@ function Login({ user, setIsLoggedIn }) {
         </p>
         <p className="fs-3">
           Noch kein Konto?{" "}
-          <a className="text-black " href="/register">
+          <a className="text-black " onClick={handleNavigateLogin}>
             Registrieren
           </a>
         </p>

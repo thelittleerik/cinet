@@ -47,7 +47,7 @@ function App() {
               path="/game"
               element={<ProtectedRoute element={<Game />} />}
             />
-            <Route path="/map" element={<ProtectedRoute element={<Map />} />} />
+            <Route path="/map" element={<PublicRoute element={<Map />} />} />
             <Route
               path="/profil"
               element={<ProtectedRoute element={<Profil />} />}

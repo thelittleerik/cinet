@@ -13,6 +13,10 @@ function Register({ setUser }) {
     birthdate: "",
   });
 
+  const handleNavigateLogin = () => {
+    navigate("/login");
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -50,7 +54,10 @@ function Register({ setUser }) {
         <div className="route-to-login m-auto">
           <p className="link-to-login fs-1 text-center">
             Hast du schon einen Account? <br />{" "}
-            <a href="/login" className="text-black text-decoration-underline">
+            <a
+              onClick={handleNavigateLogin}
+              className="text-black text-decoration-underline"
+            >
               Hier anmelden
             </a>
           </p>
