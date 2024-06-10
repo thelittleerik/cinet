@@ -1,14 +1,12 @@
-import React from 'react';
-import Card from '../components/Card';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+import Card from "../components/Card";
 
 function Game() {
+  const navigate = useNavigate();
   const handleButtonClick = () => {
-    alert('Spiel gestartet!');
+    alert("Noch am bauen!");
   };
   
-const navigate = useNavigate();
-
   const toGame = () => {
     // route to Games
     navigate("/gamepage");
@@ -24,7 +22,7 @@ const navigate = useNavigate();
             alt="First Card Image"
             description="This is the description for Game 1."
             onButtonClick={handleButtonClick}
-            Text= "PLAY"
+            Text="PLAY"
           />
         </div>
         <div className="col-md-4">
@@ -33,8 +31,8 @@ const navigate = useNavigate();
             src="public\assets\icons\flappybird.png"
             alt="Second Card Image"
             description="This is the description for Game 2."
-            onButtonClick={toGame}
-            Text= "PLAY"
+            onClick={toGame}
+            Text="PLAY"
           />
         </div>
         <div className="col-md-4">
@@ -44,7 +42,7 @@ const navigate = useNavigate();
             alt="Third Card Image"
             description="This is the description for Game 3."
             onButtonClick={handleButtonClick}
-            Text= "PLAY"
+            Text="PLAY"
           />
         </div>
       </div>
@@ -52,4 +50,4 @@ const navigate = useNavigate();
   );
 }
 
-export default Game;
+export default Game;

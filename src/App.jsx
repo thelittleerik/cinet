@@ -23,9 +23,9 @@ function App() {
     email: "",
     password: "",
     birthdate: "",
-    points: 1000,
+    points: 0,
   });
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   // eslint-disable-next-line react/prop-types
   const ProtectedRoute = ({ element }) => {
     return isLoggedIn ? element : <Navigate to="/login" />;
@@ -51,7 +51,11 @@ function App() {
             />
             <Route
               path="/gamepage"
-              element={<ProtectedRoute element={<GamePage />} />}
+              element={
+                <ProtectedRoute
+                  element={<GamePage user={user} setUser={setUser} />}
+                />
+              }
             />
             <Route path="/map" element={<ProtectedRoute element={<Map />} />} />
             <Route
