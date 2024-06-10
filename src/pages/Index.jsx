@@ -1,6 +1,25 @@
 import Card from "../components/Card";
+import { useNavigate } from 'react-router-dom';
 
 function Index() {
+ 
+  const navigate = useNavigate();
+
+  const toGamePage = () => {
+    // route to Games
+    navigate("/gamepage");
+  };
+
+  const toGame = () => {
+    // route to Games
+    navigate("/game");
+  };
+
+  const toShop = () => {
+    // route to Games
+    navigate("/shop");
+  };
+
   return (<>
   <br /><br />
   <img src="public/kino.jpg" alt="Picture of a Cinema" />
@@ -11,6 +30,7 @@ function Index() {
             alt="First Card Image"
             description="Flappy Bird"
             Text= "PLAY"
+            onButtonClick={toGamePage}
           />
             <Card
             title="Beliebte Spiele"
@@ -18,6 +38,7 @@ function Index() {
             alt="First Card Image"
             description="Earn points by playing this games!"
             Text= "VIEW"
+            onButtonClick={toGame}
           />
             <Card
             title="Punkte Einlösen"
@@ -25,6 +46,7 @@ function Index() {
             alt="First Card Image"
             description="Use your points in the shop"
             Text= "SHOP"
+            onButtonClick={toShop}
           />
             <Card
             title="So funktioniert Cinet"
