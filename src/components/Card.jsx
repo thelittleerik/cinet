@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from './Button';
 
 function Card({ title, src, alt, description, onButtonClick, Text}) {

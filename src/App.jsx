@@ -5,6 +5,7 @@ import {
   Navigate,
 } from "react-router-dom";
 import Game from "./pages/Game";
+import GamePage from "./pages/GamePage";
 import Index from "./pages/Index";
 import Login from "./pages/Login";
 import Map from "./pages/Map";
@@ -22,7 +23,7 @@ function App() {
     email: "",
     password: "",
     birthdate: "",
-    points: 0,
+    points: 1000,
   });
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   // eslint-disable-next-line react/prop-types
@@ -48,14 +49,26 @@ function App() {
               path="/game"
               element={<ProtectedRoute element={<Game />} />}
             />
+            <Route
+              path="/gamepage"
+              element={<ProtectedRoute element={<GamePage />} />}
+            />
             <Route path="/map" element={<ProtectedRoute element={<Map />} />} />
             <Route
               path="/profil"
-              element={<ProtectedRoute element={<Profil user={user} setUser={setUser} />} />}
+              element={
+                <ProtectedRoute
+                  element={<Profil user={user} setUser={setUser} />}
+                />
+              }
             />
             <Route
               path="/shop"
-              element={<ProtectedRoute element={<ShopPage />} />}
+              element={
+                <ProtectedRoute
+                  element={<ShopPage user={user} setUser={setUser} />}
+                />
+              }
             />
             <Route
               path="/login"

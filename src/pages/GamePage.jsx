@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './GamePage.css';
-import birdIcon from 'public/assets/icons/flappybird.png'; // Importiere das Icon für den Vogel
+import birdIcon from '../../public/bird.png'; // Importiere das Icon für den Vogel
  
 const GRAVITY = 3; // Erhöhte Schwerkraft
 const JUMP = -30; // Erhöhter Sprung
