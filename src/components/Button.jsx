@@ -4,7 +4,7 @@ const Button = ({ text, onClick, autofocus, id }) => {
   return (
     <button
       onClick={onClick}
-      className="bg-black p-4 fs-1 fw-bold button"
+      className="bg-black p-3 fs-1 fw-bold button"
       autoFocus={autofocus}
       id={id}
     >
