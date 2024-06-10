@@ -30,7 +30,8 @@ function Index() {
             alt="First Card Image"
             description="Flappy Bird"
             Text= "PLAY"
-            onButtonClick={toGamePage}
+            withButton={true}
+            onClick={toGamePage}
           />
             <Card
             title="Beliebte Spiele"
@@ -38,7 +39,8 @@ function Index() {
             alt="First Card Image"
             description="Earn points by playing this games!"
             Text= "VIEW"
-            onButtonClick={toGame}
+            withButton={true}
+            onClick={toGame}
           />
             <Card
             title="Punkte Einlösen"
@@ -46,7 +48,8 @@ function Index() {
             alt="First Card Image"
             description="Use your points in the shop"
             Text= "SHOP"
-            onButtonClick={toShop}
+            withButton={true}
+            onClick={toShop}
           />
             <Card
             title="So funktioniert Cinet"

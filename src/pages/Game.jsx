@@ -22,6 +22,7 @@ function Game() {
             alt="First Card Image"
             description="This is the description for Game 1."
             onButtonClick={handleButtonClick}
+            withButton={true}
             Text="PLAY"
           />
         </div>
@@ -32,6 +33,7 @@ function Game() {
             alt="Second Card Image"
             description="This is the description for Game 2."
             onClick={toGame}
+            withButton={true}
             Text="PLAY"
           />
         </div>
@@ -42,6 +44,7 @@ function Game() {
             alt="Third Card Image"
             description="This is the description for Game 3."
             onButtonClick={handleButtonClick}
+            withButton={true}
             Text="PLAY"
           />
         </div>

@@ -1,6 +1,6 @@
 import Button from "./Button";
 // eslint-disable-next-line react/prop-types
-function Card({ title, src, alt, description, Text, onClick }) {
+function Card({ title, src, alt, description, Text, onClick, withButton }) {
   return (
     <div
       className="card mb-4 shadow-sm"
@@ -23,12 +23,14 @@ function Card({ title, src, alt, description, Text, onClick }) {
         </h4>
         <p className="card-text">{description}</p>
         <div className="d-grid">
-          <Button
-            onClick={onClick}
-            className="gamebutton"
-            text={Text}
-            style={{ color: "white" }}
-          />
+          {withButton && (
+            <Button
+              onClick={onClick}
+              className="gamebutton"
+              text={Text}
+              style={{ color: "white" }}
+            />
+          )}
         </div>
       </div>
     </div>
