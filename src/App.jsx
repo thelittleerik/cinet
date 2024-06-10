@@ -24,7 +24,7 @@ function App() {
     birthdate: "",
     points: 0,
   });
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   // eslint-disable-next-line react/prop-types
   const ProtectedRoute = ({ element }) => {
     return isLoggedIn ? element : <Navigate to="/login" />;

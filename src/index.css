@@ -38,11 +38,11 @@
 }
 
 
-.gamebutton{
+.button{
   height: 50px;
-  width: 200px;
+  width: 100px;
   background-color: #000000;
-  color: #f9f9f9;
+  color: #ffffff;
   font-family: "Archivo Black", sans-serif;
   border: none;
   transition: ease-in-out 0.3s;

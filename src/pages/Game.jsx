@@ -5,6 +5,11 @@ function Game() {
   const handleButtonClick = () => {
     alert('Spiel gestartet!');
   };
+  
+  const toGame = () => {
+    // route to Games
+    navigate("/gamepage");
+  };
 
   return (
     <div className="container mt-4">
@@ -16,6 +21,7 @@ function Game() {
             alt="First Card Image"
             description="This is the description for Game 1."
             onButtonClick={handleButtonClick}
+            Text= "PLAY"
           />
         </div>
         <div className="col-md-4">
@@ -24,7 +30,8 @@ function Game() {
             src="public\assets\icons\flappybird.png"
             alt="Second Card Image"
             description="This is the description for Game 2."
-            onButtonClick={handleButtonClick}
+            onButtonClick={toGame}
+            Text= "PLAY"
           />
         </div>
         <div className="col-md-4">
@@ -34,6 +41,7 @@ function Game() {
             alt="Third Card Image"
             description="This is the description for Game 3."
             onButtonClick={handleButtonClick}
+            Text= "PLAY"
           />
         </div>
       </div>
