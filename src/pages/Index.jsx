@@ -7,21 +7,21 @@ function Index() {
   <br />
           <Card
             title="Spiel des Tages"
-            src="public\assets\icons\tempellrun.png"
+            src="public\assets\icons\flappybird.png"
             alt="First Card Image"
             description="Flappy Bird"
             
           />
             <Card
             title="Beliebte Spiele"
-            src="public\assets\icons\tempellrun.png"
+            src="public/assets/icons/Poki-Games.webp"
             alt="First Card Image"
             description="Earn points by playing this games!"
             
           />
             <Card
             title="Punkte Einlösen"
-            src="public\assets\icons\tempellrun.png"
+            src="public/assets/icons/shop-view.png"
             alt="First Card Image"
             description="Use your points in the shop"
             
