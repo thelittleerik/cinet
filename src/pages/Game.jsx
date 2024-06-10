@@ -1,11 +1,14 @@
 import React from 'react';
 import Card from '../components/Card';
+import { useNavigate } from 'react-router-dom';
 
 function Game() {
   const handleButtonClick = () => {
     alert('Spiel gestartet!');
   };
   
+const navigate = useNavigate();
+
   const toGame = () => {
     // route to Games
     navigate("/gamepage");
